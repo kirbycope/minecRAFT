@@ -7,3 +7,7 @@ give @s minecraft:fishing_rod
 summon minecraft:item ~2 ~-0.5 ~2 {Item:{id:"minecraft:jungle_planks",Count:1},Tags:[flotsam]}
 summon minecraft:item ~2 ~-0.5 ~3 {Item:{id:"minecraft:jungle_planks",Count:1},Tags:[flotsam]}
 summon minecraft:item ~2 ~-0.5 ~4 {Item:{id:"minecraft:jungle_planks",Count:1},Tags:[flotsam]}
+
+summon minecraft:item ~3 ~-0.5 ~2 {Item:{id:"minecraft:jungle_planks",Count:1},Tags:[flotsam]}
+summon minecraft:item ~3 ~-0.5 ~3 {Item:{id:"minecraft:jungle_planks",Count:1},Tags:[flotsam]}
+summon minecraft:item ~3 ~-0.5 ~4 {Item:{id:"minecraft:jungle_planks",Count:1},Tags:[flotsam]}
