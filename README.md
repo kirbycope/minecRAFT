@@ -1,2 +1,3 @@
 # minecRAFT
-Raft in Minecraft
+Raft but in Minecraft
+![minecRAFT](/minecRAFT.png)
