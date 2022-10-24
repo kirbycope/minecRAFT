@@ -17,5 +17,5 @@ summon minecraft:item ~2 ~ ~2 {Item:{id:"minecraft:jungle_planks",Count:1},Tags:
 summon minecraft:item ~-2 ~ ~-2 {Item:{id:"minecraft:jungle_planks",Count:1},Tags:[flotsam]}
 
 # [Plastic] Sugar Cane
-summon minecraft:item ~5 ~ ~ {Item:{id:"minecraft:jungle_leaves",Count:1},Tags:[flotsam]}
-summon minecraft:item ~-5 ~ ~ {Item:{id:"minecraft:jungle_leaves",Count:1},Tags:[flotsam]}
+summon minecraft:item ~5 ~ ~ {Item:{id:"minecraft:sugar_cane",Count:1},Tags:[flotsam]}
+summon minecraft:item ~-5 ~ ~ {Item:{id:"minecraft:sugar_cane",Count:1},Tags:[flotsam]}
