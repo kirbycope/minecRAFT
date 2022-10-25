@@ -19,3 +19,6 @@ summon minecraft:item ~-2 ~ ~-2 {Item:{id:"minecraft:jungle_planks",Count:1},Tag
 # [Plastic] Sugar Cane
 summon minecraft:item ~5 ~ ~ {Item:{id:"minecraft:sugar_cane",Count:1},Tags:[flotsam]}
 summon minecraft:item ~-5 ~ ~ {Item:{id:"minecraft:sugar_cane",Count:1},Tags:[flotsam]}
+
+# Bruce!
+summon dolphin ~ ~1 ~ {PersistenceRequired:1,Silent:1,CustomName:"Bruce"}
