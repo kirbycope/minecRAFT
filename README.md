@@ -1,6 +1,7 @@
+![minecRAFT](/minecRAFT.png)
+
 # minecRAFT
 Raft but in Minecraft
-![minecRAFT](/minecRAFT.png)
 
 ## Installation
 1. Download the [zip file](https://github.com/kirbycope/minecRAFT/archive/refs/heads/main.zip)
