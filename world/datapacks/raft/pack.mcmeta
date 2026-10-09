@@ -1,0 +1,16 @@
+{
+	"pack": {
+		"description": "minecRAFT: Raft but in Minecraft",
+		"min_format": [101, 1],
+		"max_format": 121
+	},
+	"overlays": {
+		"entries": [
+			{
+				"min_format": [101, 1],
+				"max_format": 120,
+				"directory": "before_26_3"
+			}
+		]
+	}
+}

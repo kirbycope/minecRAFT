@@ -1,0 +1,8 @@
+# the release build and CI's server, written by tools/build_world.py and tools/server.py
+/build/
+
+# the watchdog skill's run logs
+/watchdog/
+
+# Python bytecode
+__pycache__/

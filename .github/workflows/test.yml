@@ -1,0 +1,54 @@
+name: Test
+
+# Plays minecRAFT through on a real server for each Java Edition version the data pack supports, with
+# tools/playtest.py --headless: no players, the raft's ocean force loaded, every step checked over RCON.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  playtest:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        version: ["26.1", "26.2", "26.3"]
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: The generated functions are up to date
+        run: |
+          python3 tools/island.py
+          python3 tools/anchor_arc.py
+          git diff --exit-code -- world/datapacks
+
+      - name: Set up the ${{ matrix.version }} server
+        run: python3 tools/server.py build/server --version ${{ matrix.version }}
+
+      - name: Play it through
+        run: |
+          cd build/server
+          java -Xmx2G -jar server.jar nogui > server.log 2>&1 &
+          cd ../..
+          timeout 600 python3 tools/playtest.py --headless
+
+      - name: No data pack errors in the server log
+        if: always()
+        run: |
+          cat build/server/server.log | grep -E "WARN|ERROR" || true
+          ! grep -E "Failed to load function|Serialization errors|Failed to decode|Registry loading errors|Failed to parse" build/server/server.log

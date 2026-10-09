@@ -1,0 +1,1 @@
+$summon minecraft:block_display $(x) 105.85 $(z) {Tags:["flotsam","flotsam.palm_leaf","raft.new"],Rotation:[$(yaw)f,0f],teleport_duration:2,block_state:{Name:"minecraft:azalea_leaves"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.3f,-0.1f,-0.25f],scale:[0.6f,0.2f,0.5f]}}

@@ -1,0 +1,44 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		{
+			"rolls": {
+				"type": "minecraft:uniform",
+				"min": 4,
+				"max": 6
+			},
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:jungle_planks",
+					"weight": 484
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:string",
+					"weight": 129
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:iron_nugget",
+					"weight": 324
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:raw_iron",
+					"weight": 32
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:slime_ball",
+					"weight": 16
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:glass",
+					"weight": 16
+				}
+			]
+		}
+	]
+}

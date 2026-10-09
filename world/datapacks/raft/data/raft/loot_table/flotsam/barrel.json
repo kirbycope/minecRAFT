@@ -1,0 +1,54 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		{
+			"rolls": {
+				"type": "minecraft:uniform",
+				"min": 4,
+				"max": 6
+			},
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:jungle_planks",
+					"weight": 3773
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:sugar_cane",
+					"weight": 1415
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:jungle_leaves",
+					"weight": 1887
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:iron_nugget",
+					"weight": 943
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:string",
+					"weight": 708
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cobblestone",
+					"weight": 613
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:beetroot",
+					"weight": 330
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:potato",
+					"weight": 330
+				}
+			]
+		}
+	]
+}

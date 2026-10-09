@@ -1,0 +1,1 @@
+$summon minecraft:block_display $(x) 105.85 $(z) {Tags:["flotsam","flotsam.barrel","raft.new"],Rotation:[$(yaw)f,0f],teleport_duration:2,block_state:{Name:"minecraft:barrel",Properties:{facing:"up"}},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.3f,-0.3f,-0.3f],scale:[0.6f,0.6f,0.6f]}}

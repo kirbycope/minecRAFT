@@ -1,0 +1,1 @@
+$summon minecraft:block_display $(x) 105.85 $(z) {Tags:["flotsam","flotsam.plank","raft.new"],Rotation:[$(yaw)f,0f],teleport_duration:2,block_state:{Name:"minecraft:jungle_planks"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.4f,-0.06f,-0.13f],scale:[0.8f,0.12f,0.26f]}}
