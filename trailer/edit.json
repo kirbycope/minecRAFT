@@ -1,0 +1,18 @@
+{
+	"music": {"file": "music.wav", "start": "beat", "fade_out": 3.0},
+	"duck_db": 6,
+	"shots": [
+		{"take": "open", "in": 0.8, "beats": 14, "motion": "none", "card": "title", "card_in": 1.0, "card_out": 0.6, "fade_in": 0.8},
+		{"take": "drift", "in": 0.8, "beats": 10, "motion": "none", "card": "drift", "card_in": 0.4},
+		{"take": "fish", "in": 1.0, "beats": 20, "motion": "none", "card": "fish", "card_in": 0.4},
+		{"take": "horizon_x6", "in": 3.4, "beats": 16, "motion": "none", "card": "horizon", "card_in": 0.4},
+		{"take": "alongside", "in": 0.5, "beats": 12, "motion": "none", "card": "island", "card_in": 0.4},
+		{"take": "anchor", "in": 1.0, "beats": 14, "motion": "none", "card": "anchor", "card_in": 0.4},
+		{"take": "explore", "in": 0.3, "beats": 20, "motion": "none", "card": "explore", "card_in": 0.4},
+		{"take": "hut", "in": 0.3, "beats": 10, "motion": "none", "card": "hut", "card_in": 0.4},
+		{"take": "underwater", "in": 0.3, "beats": 12, "motion": "none", "card": "underwater", "card_in": 0.4},
+		{"take": "castoff", "in": 1.0, "beats": 12, "motion": "none", "card": "castoff", "card_in": 0.4},
+		{"take": "castoff_x4", "in": 2.4, "beats": 12, "motion": "none", "card": "driftaway", "card_in": 0.4},
+		{"take": "end", "in": 0.3, "beats": 14, "motion": "none", "card": "end", "card_in": 0.8, "fade_out": 1.5}
+	]
+}

@@ -100,6 +100,8 @@ in the older form. `tools/overlay.py` writes it (`tools/island.py` runs it), so 
 | `tools/playtest.py` | Plays it through on a server and checks every step |
 | `tools/mcp_bot.py`, `tools/fisher.cjs` | The players `playtest.py` uses |
 | `tools/rcon.py` | A small RCON client |
+| `tools/trailer.py`, `tools/trailer_cut.py`, `tools/client_drive.py`, `tools/sck_capture.py` | Film and cut the trailer |
+| `trailer/edit.json`, `trailer/titles.json` | The trailer's edit list and title copy |
 
 ## Developing on a local server
 `tools/server.py` sets up a server with the world in place and, with `--link`, the data pack linked to this
@@ -149,6 +151,27 @@ python tools/playtest.py --rcon-port 25576 --game-port 25567
 `--headless` plays the same story with no players at all, calling the pack's own functions where a player would
 act, so it runs on any version. The Test workflow runs it on a fresh 26.1, 26.2 and 26.3 server for every push, and
 checks the server's log for data pack errors and the generated functions for being up to date.
+
+## Trailer
+`tools/trailer.py` films the trailer on the local server with the Java client on this Mac, the way minecRAFT-bedrock's
+does with Bedrock: commands over RCON, real keys and clicks through `tools/client_drive.py` (macOS input events),
+and the picture and the game's own sound recorded together by `tools/sck_capture.py` (ScreenCaptureKit, filtered to
+the Minecraft client, so nothing else on the Mac is heard). The camera is the player spectating an invisible item
+display moved a tick at a time along an eased path, which the client glides; a mannequin wearing the player's skin
+stands in for them on the raft.
+
+```bash
+python tools/trailer.py prep            # morning, clear, no island, the anchor set down on the raft for real
+python tools/trailer.py shot open       # one shot into trailer/takes/open.mp4 (the shots are listed in the script)
+python tools/trailer.py moor            # bring the island in and anchor it again, to refilm the moored shots
+python tools/trailer.py reset           # the player's body, HUD and the game rules back
+python tools/trailer_cut.py             # cuts trailer/minecRAFT-trailer.mp4 from trailer/edit.json and trailer/titles.json
+```
+
+The client runs fullscreen with music off and the HUD hidden (F1), so the takes are filmed while nobody is using the
+Mac. The cut uses the trailer skill's `titles.py` and `assemble.py`: shots measured in beats of the music, the game's
+sound under it, the music ducked beneath that, levelled to -14 LUFS. The music (A Beautiful Discovery, from the
+Fantasy Adventure & Exploration Music pack) and the game's fonts are copied into the git-ignored `trailer/takes/`.
 
 ## Releasing
 Pushing a tag that starts with `v` (for example `git tag v1.0.0 && git push origin v1.0.0`) runs the Release workflow

@@ -6,3 +6,8 @@
 
 # Python bytecode
 __pycache__/
+
+# trailer takes, cards, the music and fonts copied in for the cut, and the cut itself (sent, not committed)
+/trailer/takes/
+/trailer/*.mp4
+/trailer/work/

@@ -1,0 +1,15 @@
+{
+	"style": {"font": "trailer/takes/fonts/ten.otf", "accent": "#ECA44A", "outline": "#102C4E", "text": "#FFFFFF"},
+	"cards": [
+		{"name": "drift", "kind": "caption", "big": "DRIFT", "line": "ON AN OCEAN THAT NEVER ENDS"},
+		{"name": "fish", "kind": "caption", "big": "HOOK", "line": "WHATEVER FLOATS BY"},
+		{"name": "horizon", "kind": "caption", "big": "LAND HO", "line": "SOMETHING ON THE HORIZON"},
+		{"name": "island", "kind": "caption", "big": "SMALL ISLAND 1", "line": "STRAIGHT OUT OF RAFT"},
+		{"name": "anchor", "kind": "caption", "big": "ANCHOR", "line": "THROW IT AND THE RAFT STOPS"},
+		{"name": "explore", "kind": "caption", "big": "CLIMB. CHOP. MINE.", "line": "IT IS SOLID GROUND NOW"},
+		{"name": "hut", "kind": "caption", "big": "LOOT", "line": "THE ABANDONED HUT AND ITS LOOT BOX"},
+		{"name": "underwater", "kind": "caption", "big": "BELOW", "line": "THE ANCHOR HOLDS ON THE SHELF"},
+		{"name": "castoff", "kind": "caption", "big": "CAST OFF", "line": "BREAK THE POST"},
+		{"name": "driftaway", "kind": "caption", "big": "AND DRIFT ON", "line": "THE ISLAND FLOATS AWAY BEHIND YOU"}
+	]
+}
