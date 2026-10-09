@@ -197,10 +197,11 @@ def main() -> int:
     time.sleep(1)
     x_b = score(r, "#island_x")
     check("the island drifts with the current", x_a is not None and x_b is not None and x_b > x_a, f"{x_a} -> {x_b}")
-    root_x = number(r.command("data get entity @e[type=minecraft:block_display,tag=island.s0,tag=island.root,limit=1] Pos[0]"))
-    passenger_x = number(r.command("execute as @e[type=minecraft:block_display,tag=island.s0,tag=island.root,limit=1] on passengers run data get entity @s Pos[0]"))
-    check("each slice's entities ride its root", root_x is not None and passenger_x is not None and abs(root_x - passenger_x) < 0.01,
-          f"root {root_x}, passenger {passenger_x}")
+    # In one command, so in one tick: every passenger of every slice sits on its root.
+    r.command("execute as @e[type=minecraft:block_display,tag=island.root] at @s on passengers if entity @s[distance=..0.01] run tag @s add playtest.on")
+    on_root = count(r, "@e[tag=playtest.on]")
+    r.command("tag @e[tag=playtest.on] remove playtest.on")
+    check("each slice's entities ride its root", on_root == 767, f"{on_root} of 767 on their root")
 
     # The anchor: set down on the raft by the bot, then thrown.
     if headless:
