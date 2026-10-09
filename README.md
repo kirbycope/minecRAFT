@@ -101,9 +101,6 @@ in the older form. `tools/overlay.py` writes it (`tools/island.py` runs it), so 
 | `tools/mcp_bot.py`, `tools/fisher.cjs` | The players `playtest.py` uses |
 | `tools/rcon.py` | A small RCON client |
 
-The files at the repository's root other than these (`level.dat`, `region/` and the rest) are the original 2022 map
-for 1.19.2.
-
 ## Developing on a local server
 `tools/server.py` sets up a server with the world in place and, with `--link`, the data pack linked to this
 repository's, so an edit is live after `/reload`:

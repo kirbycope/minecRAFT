@@ -171,9 +171,7 @@ def main() -> int:
         check("the cast lands in the water", landed and bob_x is not None, f"bobber at {bob_x}, {bob_z}")
         if bob_x is not None:
             # Three blocks upstream of the bobber: the current brings it in within about two seconds.
-            r.command(f"function raft:flotsam/summon/barrel {{x:{bob_x - 3:.2f},z:{bob_z:.2f},yaw:30}}")
-            r.command("tag @e[tag=raft.new] add bob.a")
-            r.command("tag @e[tag=raft.new] remove raft.new")
+            r.command(f"function raft:flotsam/summon/barrel {{x:{bob_x - 3:.2f},z:{bob_z:.2f},yaw:30,bob:\"bob.a\"}}")
             caught = wait_for(lambda: count(r, "@e[tag=flotsam.barrel,tag=hooked]") == 1, 6)
             check("a barrel drifting into the bobber is caught", caught)
             time.sleep(1)
